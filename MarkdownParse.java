@@ -19,6 +19,9 @@ public class MarkdownParse {
             if (openBracket == -1 || closeBracket == -1 || openParen == -1 || closeParen == -1) {
                 break;
             }
+            if (markdown.substring(openParen + 1, closeParen).contains(" ")) {
+                break;
+            }
             toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
         }
