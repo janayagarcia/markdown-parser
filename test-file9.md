@@ -1,3 +1,3 @@
 # title
 
-[stuff](page.com)(PAGE.COM)
+[stuff](page.com)[stuff](page.com)
