@@ -27,6 +27,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run JUnit Tests
-        run: 
+        run: |
           javac -cp .:lib/* MarkdownParseTest.java
-          java -cp .:lib/* org.junit.runner.JUnitCore MarkdownParseTest.java
+          java -cp .:lib/* org.junit.runner.JUnitCore MarkdownParseTest
