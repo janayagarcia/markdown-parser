@@ -26,11 +26,10 @@ public class MarkdownParse {
             if ((closeBracket + 1) != openParen) {
                 break;
             }
-            /*
+            
             if (markdown.substring(openParen + 1, closeParen).contains("(")) {
                 break;
             }
-            */
             toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
         }
