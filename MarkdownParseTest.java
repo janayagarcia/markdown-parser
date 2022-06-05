@@ -4,10 +4,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.io.IOException;
+import java.util.List;
 
 public class MarkdownParseTest {
 
-    
+    /*
     @Test
     public void addition() {
         assertEquals(2, 1 + 1);
@@ -130,4 +131,19 @@ public class MarkdownParseTest {
         assertEquals(expected, links);
     }
 
+    */
+
+    @Test
+    public void oneninefour() throws IOException {
+        String contents = Files.readString(Path.of("194.md"));
+        List<String> expect = List.of("Foo*bar]");
+        assertEquals(expect, MarkdownParse.getLinks(contents));
+    }
+
+    @Test
+    public void twozeroone() throws IOException {
+        String contents = Files.readString(Path.of("201.md"));
+        List<String> expect = new ArrayList<>();
+        assertEquals(expect, MarkdownParse.getLinks(contents));
+    }
 }
