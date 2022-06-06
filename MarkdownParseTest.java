@@ -137,7 +137,7 @@ public class MarkdownParseTest {
     @Test
     public void fourninefive() throws IOException {
         String contents = Files.readString(Path.of("495.md"));
-        List<String> expect = List.of("[foo(and(bar))");
+        List<String> expect = List.of("foo(and(bar))");
         assertEquals(expect, MarkdownParse.getLinks(contents));
     }
 
