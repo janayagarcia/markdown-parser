@@ -33,7 +33,11 @@ public class MarkdownParse {
             toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
         }
-
+        /*
+        while it has not reached another [ or the end of the file 
+        keep searching for another ) just to ensure we are getting
+         the last parenthesis
+        */                                                    
         return toReturn;
     }
 
